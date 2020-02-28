@@ -4,8 +4,51 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "83153de0b10c42f671d4d55e7094f087",
+    "content-hash": "c085a171ff8ee4d96a8990e708a7f2bd",
     "packages": [
+        {
+            "name": "calebporzio/sushi",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/calebporzio/sushi.git",
+                "reference": "a5620ae4eda911f6c589480f51340a41ac4a417f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/calebporzio/sushi/zipball/a5620ae4eda911f6c589480f51340a41ac4a417f",
+                "reference": "a5620ae4eda911f6c589480f51340a41ac4a417f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "^5.8 || ^6.0 || ^7.0",
+                "illuminate/support": "^5.8 || ^6.0 || ^7.0",
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "orchestra/database": "3.8.* || 3.9.* || ^4.0",
+                "orchestra/testbench": "3.8.* || 3.9.* || ^4.0",
+                "phpunit/phpunit": "^7.5 || ^8.4 || ^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sushi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Caleb Porzio",
+                    "email": "calebporzio@gmail.com"
+                }
+            ],
+            "description": "Eloquent's missing \"array\" driver.",
+            "time": "2020-02-15T17:02:53+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "v0.1.1",
