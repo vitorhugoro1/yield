@@ -18,4 +18,9 @@ class Stock extends Model
     {
         return $this->belongsTo(Enterprise::class);
     }
+
+    public function stockYield()
+    {
+        return $this->hasMany(StockYield::class);
+    }
 }

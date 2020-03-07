@@ -9,6 +9,8 @@ class SourceData extends Model
 {
     use SoftDeletes;
 
+    protected $table = 'source_datas';
+
     protected $fillable = [
         'name', 'link', 'active',
     ];

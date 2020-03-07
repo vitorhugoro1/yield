@@ -13,6 +13,10 @@ class StockYield extends Model
         'stock_id', 'source_data_id', 'income_type', 'payed_at', 'negociated_at', 'amount',
     ];
 
+    protected $casts = [
+        'amount' => 'decimal',
+    ];
+
     public function stock()
     {
         return $this->belongsTo(Stock::class);

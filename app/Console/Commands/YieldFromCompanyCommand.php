@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Domains\Parsers\Actions\ParseStatusInvest;
 use App\Domains\Stocks\Models\Stock;
 use Illuminate\Console\Command;
 
@@ -36,10 +37,15 @@ class YieldFromCompanyCommand extends Command
      *
      * @return mixed
      */
-    public function handle()
+    public function handle(ParseStatusInvest $statusInvest)
     {
         $stock = Stock::firstWhere('code', strtoupper($this->argument('stock')));
 
-        dd($stock);
+        if (!$stock) {
+            $this->info("Not found {$stock}");
+            return;
+        }
+
+        $statusInvest->execute($stock);
     }
 }
